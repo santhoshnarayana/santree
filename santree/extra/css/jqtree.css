@@ -1,0 +1,210 @@
+ul.jqtree-tree {
+   margin-left: 32px;
+}
+ul.jqtree-tree, ul.jqtree-tree ul.jqtree_common {
+   list-style: none outside;
+   margin-bottom: 0;
+   padding: 0;
+}
+ul.jqtree-tree ul.jqtree_common {
+   display: block;
+   margin-left: 12px;
+   margin-right: 0;
+}
+ul.jqtree-tree li.jqtree-closed > ul.jqtree_common {
+   display: none;
+}
+ul.jqtree-tree li.jqtree_common {
+   clear: both;
+   list-style-type: none;
+   line-height:1.3em;
+   background-image: url("../../../../img/sub-nodes.png");
+   background-position: 0 -2px;
+   background-repeat: no-repeat;
+   padding-left: 14px;
+}
+ul.jqtree-tree li.jqtree_common:last-child {
+   clear: both;
+   list-style-type: none;
+   line-height:2.3em;
+   background-image: url("../../../../img/sub-nodes-last.png");
+   background-position: 0 -2px;
+   background-repeat: no-repeat;
+   padding-left: 14px;
+}
+
+ul.jqtree-tree .jqtree-toggler {
+   display: block;
+   position: absolute;
+   left: -1.5em;
+   top: 30%;
+   *top: 0;  /* fix for ie7 */
+   font-size: 12px;
+   line-height: 12px;
+   font-family: arial;  /* fix for ie9 */
+   border-bottom: none;
+   color: #333;
+}
+ul.jqtree-tree .jqtree-toggler:hover {
+   color: #000;
+}
+ul.jqtree-tree .jqtree-element {
+   cursor: pointer;
+}
+ul.jqtree-tree .jqtree-title {
+   /*color: #1C4257;*/
+	color:#58595b;
+   vertical-align: middle;
+}
+ul.jqtree-tree li.jqtree-folder {
+   background-image:url("../../../../img/tree-left.png")!important;
+   background-repeat:repeat-y!important;
+   background-position: 0 .5em;
+   margin-top:0;
+}
+ul.jqtree-tree li:last-child.jqtree-folder {
+   background-image:url("../../../../img/tree-left.png")!important;
+   background-repeat: no-repeat!important;
+   background-position: 0 .5em;
+   margin-top:0;
+}
+ul.jqtree-tree:first-child {
+   /*margin-top: -6px;*/
+   margin-top: 0;
+}
+ul.jqtree-tree li.jqtree-folder.jqtree-closed {
+/*margin-bottom: 4px;*/
+}
+ul.jqtree-tree li.jqtree-folder .jqtree-title {
+/*    background-image: url("../../../../img/sub-nodes.png") !important;
+    background-position: 0.1em 1.2em;
+    background-repeat: no-repeat;
+    padding-left: 14px;*/
+ }
+ul.jqtree-tree .jqtree-toggler.jqtree-closed {
+   background-position: 0 0;
+}
+span.jqtree-dragging {
+   color: #fff;
+   background: #000;
+   opacity: 0.6;
+   cursor: pointer;
+   padding: 2px 8px;
+}
+ul.jqtree-tree li.jqtree-ghost {
+   position: relative;
+   z-index: 10;
+   margin-right: 10px;
+}
+ul.jqtree-tree li.jqtree-ghost span {
+   display: block;
+}
+ul.jqtree-tree li.jqtree-ghost span.jqtree-circle {
+   background-image: url(jqtree-circle.png);
+   background-repeat: no-repeat;
+   height: 8px;
+   width: 8px;
+   position: absolute;
+   top: -4px;
+   left: 2px;
+}
+ul.jqtree-tree li.jqtree-ghost span.jqtree-line {
+   background-color: #0000ff;
+   height: 2px;
+   padding: 0;
+   position: absolute;
+   top: -1px;
+   left: 10px;
+   width: 100%;
+}
+ul.jqtree-tree li.jqtree-ghost.jqtree-inside {
+   margin-left: 48px;
+}
+ul.jqtree-tree span.jqtree-border {
+   position: absolute;
+   display: block;
+   left: -2px;
+   top: 0;
+   border: solid 2px #0000ff;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   margin: 0;
+}
+ul.jqtree-tree .jqtree-element {
+   width: 100%; /* todo: why is this in here? */
+ *width: auto; /* ie7 fix; issue 41 */
+   position: relative;
+   line-height:1.5em;
+}
+ul.jqtree-tree li.jqtree-selected > .jqtree-element, ul.jqtree-tree li.jqtree-selected > .jqtree-element:hover {
+   background-color:#6391e4;
+   padding: 1px 0 4px 0;
+}
+ul.jqtree-tree li.jqtree-selected > div.jqtree-element > span.jqtree-title, ul.jqtree-tree li.jqtree-selected > div.jqtree-element:hover > span.jqtree-title {
+   color:#ffffff!important;
+}
+ul.jqtree-tree .jqtree-moving > .jqtree-element .jqtree-title {
+   outline: dashed 1px #0000ff;
+}
+div.menuFunctions > ul.jqtree-tree > li.jqtree-folder:nth-child(1) > div.jqtree_common > a.jqtree-toggler + span {
+ font-weight: bolder;
+}
+/*:root ul.jqtree-tree li.jqtree_common {  IE9 
+   clear: both;
+   list-style-type: none;
+   line-height:1.5em;
+   background-image: url("../../../../img/sub-nodes.png");
+   background-position: 0 -5px\9;
+   background-repeat: no-repeat;
+   padding-left: 14px;
+}
+:root ul.jqtree-tree li.jqtree_common:last-child { /* IE9 */
+   clear: both;
+   list-style-type: none;
+   line-height:2.3em;
+   background-image: url("../../../../img/sub-nodes-last.png");
+   background-position: 0 -5px\9;
+   background-repeat: no-repeat;
+   padding-left: 14px;
+}*/
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+       ul.jqtree-tree li.jqtree_common {
+       clear: both;
+       list-style-type: none;
+       line-height:1.5em;
+       background-image: url("../../../../img/sub-nodes.png");
+       background-position: 0 -5px;
+       background-repeat: no-repeat;
+       padding-left: 14px;
+      }
+       ul.jqtree-tree li.jqtree_common:last-child {
+       clear: both;
+       list-style-type: none;
+       line-height:1.5em;
+       background-image: url("../../../../img/sub-nodes-last.png");
+       background-position: 0 -5px;
+       background-repeat: no-repeat;
+       padding-left: 14px;
+      }
+}
+@media screen and (min-width:0\0) {
+       ul.jqtree-tree li.jqtree_common {
+       clear: both;
+       list-style-type: none;
+       line-height:0em;
+       background-image: url("../../../../img/sub-nodes.png");
+       background-position: 0 -7px;
+       background-repeat: no-repeat;
+       padding-left: 14px;
+      }
+       ul.jqtree-tree li.jqtree_common:last-child {
+       clear: both;
+       list-style-type: none;
+       line-height:0em;
+       background-image: url("../../../../img/sub-nodes-last.png");
+       background-position: 0 -7px;
+       background-repeat: no-repeat;
+       padding-left: 14px;
+      }     
+}
